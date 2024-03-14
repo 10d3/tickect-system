@@ -12,9 +12,9 @@ function Hero() {
             <Link to="/events">View Event</Link>
           </button>
         </div>
-        <div className=" absolute bottom-4 flex items-end">
-          <span className="scroll-icon">
-            <span className="scroll-icon__dot"></span>
+        <div className="absolute bottom-4 flex items-end">
+          <span className="scroll-icon border-white border-[.1em] border-solid">
+            <span className="scroll-icon__dot bg-white"></span>
           </span>
         </div>
     </div>
