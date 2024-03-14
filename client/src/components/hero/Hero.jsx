@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 function Hero() {
   return (
-    <div className=" px-4 bg-cover bg-[url('/public/heroimg.jpg')] w-full h-dvh flex flex-col justify-center items-center ">
+    <div className=" px-4 bg-cover bg-[url('/public/heroimg.jpg')] w-full h-dvh flex flex-col justify-center items-center overscroll-x-none">
         <div className=" w-full md:w-[66rem] text-white flex flex-col justify-center items-center text-justify gap-4">
           <h1 className="text-4xl md:text-5xl">See what&apos;s hapenning</h1>
           <h3 className=" w-[90%] text-2xl md:text-3xl">Le plate-forme #1 en Haiti pour acheter vos billets.</h3>

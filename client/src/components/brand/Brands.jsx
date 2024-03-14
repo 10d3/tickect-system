@@ -8,7 +8,7 @@ function Brands() {
 
   const brands = [YT, SP, SY, GG, VA]
   return (
-    <div className="w-full h-[23.5rem] flex justify-center items-center">
+    <div className="w-full h-[23.5rem] flex justify-center items-center overscroll-x-none">
       <div className=" w-4/5 md:w-[66rem] h-full flex flex-col justify-center items-center">
         <div className="w-full h-1/2 flex justify-center items-center flex-col">
           <h1 className="text-3xl font-bold text-justify">Join these brands</h1>

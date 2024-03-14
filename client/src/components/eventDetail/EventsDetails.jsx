@@ -5,7 +5,7 @@ function EventsDetails() {
   const params = useParams();
 
   return (
-    <div className="  bg-[#fefefe] m-0 p-0 h-fit w-dvw flex flex-col justify-center items-center text-black px-4 md:mb-8">
+    <div className="  bg-[#fefefe] m-0 p-0 h-fit w-full flex flex-col justify-center items-center text-black px-4 md:mb-8">
       <h1 className=" mt-[5rem] pb-10 flex left-0">
         events title
       </h1>

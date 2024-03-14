@@ -29,14 +29,16 @@ function TopEvent() {
   ];
 
   return (
-    <div className=" w-full md:w-[66rem] h-fit flex flex-col items-center mb-16 mt-16">
-      <div className="w-full h-fit mt-14 mb-4 md:mt-auto md:mb-auto md:my-20 items-center flex flex-col md:flex-row flex-nowrap md:justify-between">
-        <h1 className="text-2xl font-bold">Top Events</h1>
-      </div>
-      <div className=" w-full h-fit flex flex-col justify-center items-center gap-2 md:flex-row md:flex-wrap py-4">
-        {events.map((ct, i) => (
-          <Card key={i} data={ct} />
-        ))}
+    <div className=" w-full h-fit flex flex-col items-center mb-16 mt-16 overscroll-x-none">
+      <div className="md:w-[66rem] flex flex-col items-center w-full ">
+        <div className="w-full h-fit mt-14 mb-4 md:mt-auto md:mb-auto md:my-20 items-center flex flex-col md:flex-row flex-nowrap md:justify-between">
+          <h1 className="text-2xl font-bold">Top Events</h1>
+        </div>
+        <div className=" w-full h-fit flex flex-col justify-center items-center gap-2 md:flex-row md:flex-wrap py-4">
+          {events.map((ct, i) => (
+            <Card key={i} data={ct} />
+          ))}
+        </div>
       </div>
     </div>
   );
