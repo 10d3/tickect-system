@@ -1,33 +1,37 @@
 import { useState } from "react";
 import img from "../../../public/heroimg.jpg";
 
-function Solution() {
+function Solution({data1 , idx}) {
   const otherData = {
     title: "La solution de billetterie à portée de tous.",
     desc: "Découvrez la plateforme de billetterie conçue pour simplifier votre expérience et celle de vos participants :",
   };
-  const data = [
-    {
-      title: "Expérience utilisateur optimale",
-      content:
-        "Profitez d’une expérience fluide sur tous les écrans, que vous soyez en train de configurer votre billetterie d’événement ou d’acheter un billet.",
-    },
-    {
-      title: "Simplicité et rapidité de configuration",
-      content:
-        "Pas besoin d’être un expert en billetterie ! Configurez votre événement et commencez à vendre des billets en quelques minutes.",
-    },
-    {
-      title: "Formulaires intuitifs et sur-mesure",
-      content:
-        "Créez autant de formulaires que vous le souhaitez pour récupérer les informations qui vous intéressent. Utilisez ces données pour les afficher sur vos billets ou exploitez les pour réaliser vos opérations marketing et mieux répondre aux attentes de votre public.",
-    },
-    {
-      title: "Accompagnement personnalisé",
-      content:
-        "Que vous ayez besoin d’aide pour les réglages ou pour choisir les meilleures options pour votre événement, notre équipe qualifiée est là pour vous guider. Nous sommes disponibles via téléphone, e-mail et chat pour assurer votre succès à chaque étape.",
-    },
-  ];
+  // const data = [
+  //   {
+  //     title: "Expérience utilisateur optimale",
+  //     content:
+  //       "Profitez d’une expérience fluide sur tous les écrans, que vous soyez en train de configurer votre billetterie d’événement ou d’acheter un billet.",
+  //   },
+  //   {
+  //     title: "Simplicité et rapidité de configuration",
+  //     content:
+  //       "Pas besoin d’être un expert en billetterie ! Configurez votre événement et commencez à vendre des billets en quelques minutes.",
+  //   },
+  //   {
+  //     title: "Formulaires intuitifs et sur-mesure",
+  //     content:
+  //       "Créez autant de formulaires que vous le souhaitez pour récupérer les informations qui vous intéressent. Utilisez ces données pour les afficher sur vos billets ou exploitez les pour réaliser vos opérations marketing et mieux répondre aux attentes de votre public.",
+  //   },
+  //   {
+  //     title: "Accompagnement personnalisé",
+  //     content:
+  //       "Que vous ayez besoin d’aide pour les réglages ou pour choisir les meilleures options pour votre événement, notre équipe qualifiée est là pour vous guider. Nous sommes disponibles via téléphone, e-mail et chat pour assurer votre succès à chaque étape.",
+  //   },
+  // ];
+
+  const changeF = idx % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row';
+
+  const dat = data1
 
   const [selected, setSelected] = useState(0);
 
@@ -40,8 +44,8 @@ function Solution() {
   };
 
   return (
-    <section className="w-[90%] h-fit flex flex-col-reverse mb-4 justify-between md:flex-row">
-      <div className=" w-full h-full md:w-[45%] flex justify-center items-center">
+    <section className= {`w-[90%] h-fit flex flex-col-reverse mb-4 justify-between ${changeF}`} >
+      <div className=" w-full h-full md:w-[45%] flex justify-center items-center" >
         <img className=" h-fit w-full " src={img} alt="" />
       </div>
       <div className=" w-full h-fit md:w-[45%] flex flex-col gap-4">
@@ -50,7 +54,7 @@ function Solution() {
           <p>{otherData.desc}</p>
         </div>
         <div className="h-fit">
-          {data.map((item, i) => {
+          {dat.map((item, i) => {
             return (
               <div
                 className="bg-blue-200 my-4 rounded-md h-fit gap-4 flex flex-col"

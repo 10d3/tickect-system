@@ -2,7 +2,7 @@ function SearchBar() {
   const places = ["FL", "CP", "OUA", "P-AU-P", "JACMEL"];
   return (
     <div className="w-full mt-4 h-fit md:h-[8rem] relative md:top-[0] justify-center items-center flex text-white">
-      <div className="flex w-5/6 py-6 md:px-0 md:w-[66rem] h-full rounded-lg bg-[#242565] flex-col md:flex-row items-center justify-center gap-4">
+      <div className="flex w-5/6 py-6 md:px-0 md:max-w-[70%] h-full rounded-lg bg-[#242565] flex-col md:flex-row items-center justify-center gap-4">
         <div className="flex flex-col w-3/4 md:w-1/4">
           <label htmlFor="search">Search Event</label>
           <input

@@ -18,7 +18,7 @@ function Footer() {
 
   return (
     <div className="w-full h-fit md:h-[26.9rem] pt-4 overscroll-x-none relative bottom-0 flex flex-col items-center justify-center bg-[#0A075F] text-white">
-      <div className=" w-full md:w-[72rem] h-5/6 flex flex-col-reverse md:flex-row flex-nowrap items-center justify-center gap-4 md:gap-6">
+      <div className=" w-full md:max-w-[70%] h-5/6 flex flex-col-reverse md:flex-row flex-nowrap items-center justify-center gap-4 md:gap-6">
         <div className=" w-3/4 md:w-1/3 h-full flex justify-center items-center md:items-start flex-col md:gap-8">
           <h1 className="text-2xl font-bold">Logo</h1>
           <div className="flex flex-col gap-4">

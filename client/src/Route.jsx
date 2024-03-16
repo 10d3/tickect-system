@@ -12,7 +12,7 @@ function Routerage() {
       <Route path="events" element={<Event />} />
       <Route path="events/:id" element={<EventsDetails />} />
       <Route path="account" element={<Account />} />
-      <Route path="create&Event" element={<CreateEvents />} />
+      <Route path="createEvent" element={<CreateEvents />} />
     </Routes>
   );
 }

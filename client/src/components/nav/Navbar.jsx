@@ -5,15 +5,16 @@ function Navbar() {
   const links = [
     { name: "home", href: "/" },
     { name: "event", href: "/events" },
+    {name:'create event', href:'/createEvent'},
     { name: "faq", href: "#" },
   ];
 
   const [isActive, setIsActive] = useState(false);
 
   return (
-    <nav className=" h-fit p-4 fixed top-0 w-full flex items-center justify-center bg-black text-white z-50 backdrop-blur-xl">
+    <nav className=" h-fit p-4 top-0 w-full flex items-center justify-center bg-black text-white z-50 backdrop-blur-xl">
       {/* navbar for desktop */}
-      <div className=" w-full md:w-[66rem] h-full flex-row justify-between hidden text-white items-center md:flex">
+      <div className=" w-full md:max-w-[70%] h-full flex-row justify-between hidden text-white items-center md:flex">
         <div>
           <Link to="/">Logo</Link>
         </div>
@@ -59,7 +60,7 @@ function Navbar() {
           {isActive && (
             <div className="h-[95vh] flex flex-col items-center justify-center bg-transparent gap-6">
               <div className="">
-                <ul className=" flex flex-col justify-center gap-4 ">
+                <ul className=" flex flex-col items-center justify-center gap-4 ">
                   {links.map((link, i) => {
                     return (
                       <li
@@ -81,7 +82,7 @@ function Navbar() {
                     setIsActive(false);
                   }}
                   to="/account"
-                  className="rounded-full w-fit px-3 "
+                  className="rounded-full w-fit px-4 py-2 bg-blue-600 text-white "
                 >
                   Login
                 </Link>
